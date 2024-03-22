@@ -2,12 +2,13 @@ package com.meituan.sample;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.meituan.robust.PatchExecutor;
 /**
@@ -22,8 +23,8 @@ import com.meituan.robust.PatchExecutor;
  * "JUMP_SECOND_ACTIVITY" button will jump to the second ACTIVITY,so you can patch a Activity.<br>
  * <br>
  * Attention to this ,We recommend that one patch is just for one built apk ,because every  built apk has its unique mapping.txt and resource id<br>
- *
  * @author mivanzhang
+ *
  */
 
 public class MainActivity extends AppCompatActivity {
@@ -68,10 +69,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private boolean isGrantSDCardReadPermission() {
-        return PermissionUtils.isGrantSDCardReadPermission(this);
-    }
-
     private void requestPermission() {
         PermissionUtils.requestSDCardReadPermission(this, REQUEST_CODE_SDCARD_READ);
     }
@@ -97,6 +94,10 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "failure because without sd card read permission", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private boolean isGrantSDCardReadPermission() {
+        return PermissionUtils.isGrantSDCardReadPermission(this);
     }
 
     private void runRobust() {

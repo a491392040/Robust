@@ -70,6 +70,9 @@ public class ReadMapping {
                             needBacktrace = true;
                             break;
                         }
+                        if(line.startsWith("#")){
+                            continue;
+                        }
                         String[] lineinfo = line.split(" ");
                         if (lineinfo.length != 4) {
                             throw new RuntimeException("mapping line info is error  " + line);

@@ -1,18 +1,29 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
+        maven{
+            url '../Robust/plugins'
+        }
+        google()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        flatDir {
+            dirs '../Robust/plugins'
+        }
         mavenLocal()
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
-        classpath 'com.meituan.robust:gradle-plugin:0.4.96'
-        classpath 'com.meituan.robust:auto-patch-plugin:0.4.96'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'
+//        classpath 'com.meituan.robust:gradle-plugin:0.4.96'
+        classpath 'com.migu.plugin:auto-patch-plugin:1.0.0'
+        classpath 'com.migu.plugin:gradle-plugin:1.0.0'
+//        classpath 'com.meituan.robust:auto-patch-plugin:0.4.96'
+//        classpath 'me.tatarka:gradle-retrolambda:3.2.0'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
         classpath 'me.tatarka.retrolambda.projectlombok:lombok.ast:0.2.3.a2'
     }
@@ -23,10 +34,14 @@ configurations.all {
 }
 allprojects {
     repositories {
-        mavenLocal()
-        maven {
-            url "http://depot.sankuai.com/nexus/content/groups/public/"
+        maven{
+            url '../Robust/plugins'
         }
+        google()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
+        mavenLocal()
         jcenter()
     }
     tasks.withType(JavaCompile) { options.encoding = "UTF-8" }

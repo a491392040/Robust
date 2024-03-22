@@ -116,7 +116,7 @@ Robust补丁自动化，为Robust自动生成补丁，使用者只需要提交�
 1. 生成样例apk，执行gradle命令：
 
 	```java
-	./gradlew clean  assembleRelease --stacktrace --no-daemon
+	./gradlew  
 	```
 2. 安装样例apk。保存mapping.txt文件以及app/build/outputs/robust/methodsMap.robust文件
 3. 修改代码之后，加上**@Modify**注解或者调用RobustModify.modify()方法
@@ -130,7 +130,7 @@ Robust补丁自动化，为Robust自动生成补丁，使用者只需要提交�
 ![补丁制作成功图片](images/patchsuccess_cn.png)
 7. 将补丁文件copy到手机目录/sdcard/robust下
 
-	```java
+	```java[meituan.jar](app%2Fbuild%2Foutputs%2Frobust%2Fmeituan.jar)
 	adb push ~/Desktop/code/robust/app/build/outputs/robust/patch.jar /sdcard/robust/patch.jar
 	```
 	补丁的路径/sdcard/robust是`PatchManipulateImp`中指定的
@@ -158,7 +158,7 @@ Robust补丁自动化，为Robust自动生成补丁，使用者只需要提交�
 3. 字段增加能力内测中，不过暂时可以通过增加新类，把字段放到新类中的方式来实现字段增加能力
 4. 新增的类支持包括静态内部类和非内部类
 5. 对于只有字段访问的函数无法直接修复，可通过调用处间接修复
-6. 构造方法的修复内测中
+6. 构造方法的修复内测中tttt
 7. 资源和so的修复内测中
 8. 更多的信息，请访问我们的[Wiki](https://github.com/Meituan-Dianping/Robust/wiki)
 

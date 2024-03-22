@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.migu.plugin",
+    "module": "auto-patch-base",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "auto-patch-base-1.0.0.jar",
+          "url": "auto-patch-base-1.0.0.jar",
+          "size": 11261,
+          "sha512": "47896a61bcccef67b2dfcab31b4c182776985fea471c0c275935a8957f1b5f73280b2385ad00c17eb979b3e6ac2d96e2bb797b9b5f2f1a4d6938853b88cc448f",
+          "sha256": "ebf023480f68a3749171c3dc13c9f6229a4607d75e1f0307228711451bca9ab4",
+          "sha1": "b9d0e960d68eee001df9349b82037371c7d7608c",
+          "md5": "5fb73f1bd3ee0a5d9e3c74635326deec"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 7,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "auto-patch-base-1.0.0.jar",
+          "url": "auto-patch-base-1.0.0.jar",
+          "size": 11261,
+          "sha512": "47896a61bcccef67b2dfcab31b4c182776985fea471c0c275935a8957f1b5f73280b2385ad00c17eb979b3e6ac2d96e2bb797b9b5f2f1a4d6938853b88cc448f",
+          "sha256": "ebf023480f68a3749171c3dc13c9f6229a4607d75e1f0307228711451bca9ab4",
+          "sha1": "b9d0e960d68eee001df9349b82037371c7d7608c",
+          "md5": "5fb73f1bd3ee0a5d9e3c74635326deec"
+        }
+      ]
+    }
+  ]
+}

@@ -3,8 +3,6 @@ package com.meituan.sample;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
@@ -14,6 +12,10 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.meituan.robust.patch.RobustModify;
 import com.meituan.robust.patch.annotaion.Add;
 import com.meituan.robust.patch.annotaion.Modify;
 
@@ -24,17 +26,22 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
     protected static String name = "SecondActivity";
     private ListView listView;
     private String[] multiArr = {"列表1", "列表2", "列表3", "列表4"};
+
+    @Modify
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
         listView = (ListView) findViewById(R.id.listview);
-        TextView textView = (TextView) findViewById(R.id.secondtext);
-        textView.setOnClickListener(v -> {
-//                    RobustModify.modify();
-                    Log.d("robust", " onclick  in Listener");
-                }
+        TextView textView = findViewById(R.id.secondtext);
+        textView.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            RobustModify.modify();
+                                            Log.d("robust", " onclick  in Listener");
+                                        }
+                                    }
         );
         //change text on the  SecondActivity
         textView.setText(getTextInfo());
@@ -45,11 +52,11 @@ public class SecondActivity extends AppCompatActivity implements View.OnClickLis
         printLog("robust", new String[][]{new String[]{"1", "2", "3"}, new String[]{"4", "5", "6"}});
     }
 
-//    @Modify
+    @Modify
     public String getTextInfo() {
         getArray();
-        return "error occur " ;
-//        return "error fixed";
+//        return "error occur " ;
+        return "i'm modify success!";
     }
 
     @Add

@@ -1,0 +1,18 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        maven(MavenPublication){
+            groupId 'com.migu.plugin'
+            artifactId 'auto-patch-base'
+            version '1.0.0'
+            from components.java
+        }
+    }
+
+    repositories {
+        maven{
+            url = "../plugins"
+        }
+    }
+}

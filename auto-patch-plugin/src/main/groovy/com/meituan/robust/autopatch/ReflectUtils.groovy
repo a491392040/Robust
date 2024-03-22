@@ -1,7 +1,8 @@
 package com.meituan.robust.autopatch
 
-import com.android.SdkConstants
+import com.meituan.robust.utils.SdkConstants
 import com.android.build.api.transform.TransformInput
+import com.android.build.gradle.internal.utils.SdkUtilsKt
 import com.meituan.robust.Constants
 import com.meituan.robust.utils.JavaUtils
 import javassist.*

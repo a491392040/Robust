@@ -1,6 +1,6 @@
 package robust.gradle.plugin
 
-import com.android.SdkConstants
+import com.meituan.robust.utils.SdkConstants
 import com.android.build.api.transform.TransformInput
 import javassist.ClassPool
 import javassist.CtClass

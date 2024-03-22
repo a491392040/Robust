@@ -1,0 +1,90 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.migu.plugin",
+    "module": "auto-patch-plugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "auto-patch-plugin-1.0.0.jar",
+          "url": "auto-patch-plugin-1.0.0.jar",
+          "size": 2895277,
+          "sha512": "0a4d09dfd3ebf8109ecdfed119f01f234830a92dc1137fade30d810578b2f3f49215006239e834f836ecdabb4b3914e27810545f76d672bc462820ceea931b91",
+          "sha256": "c7f163b1f416ebfd31aca6f3484ffccaa0453fd92ad86845148c8262a06bc80a",
+          "sha1": "22bb62338a4ec23a2fbf05a424c7a12cecba5928",
+          "md5": "e700f648f372d3dd7d7beacbbb0e87ff"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "7.4.2"
+          }
+        },
+        {
+          "group": "org.javassist",
+          "module": "javassist",
+          "version": {
+            "requires": "3.20.0-GA"
+          }
+        },
+        {
+          "group": "commons-io",
+          "module": "commons-io",
+          "version": {
+            "requires": "2.11.0"
+          }
+        },
+        {
+          "group": "com.migu.plugin",
+          "module": "auto-patch-base",
+          "version": {
+            "requires": "1.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "auto-patch-plugin-1.0.0.jar",
+          "url": "auto-patch-plugin-1.0.0.jar",
+          "size": 2895277,
+          "sha512": "0a4d09dfd3ebf8109ecdfed119f01f234830a92dc1137fade30d810578b2f3f49215006239e834f836ecdabb4b3914e27810545f76d672bc462820ceea931b91",
+          "sha256": "c7f163b1f416ebfd31aca6f3484ffccaa0453fd92ad86845148c8262a06bc80a",
+          "sha1": "22bb62338a4ec23a2fbf05a424c7a12cecba5928",
+          "md5": "e700f648f372d3dd7d7beacbbb0e87ff"
+        }
+      ]
+    }
+  ]
+}

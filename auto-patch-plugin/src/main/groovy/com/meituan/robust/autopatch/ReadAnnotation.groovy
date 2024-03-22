@@ -54,7 +54,9 @@ class ReadAnnotation {
     }
 
     public static boolean scanClassForAddClassAnnotation(CtClass ctclass) {
-
+        if(ctclass.toString().contains("SecondActivity")){
+            logger.debug("1111")
+        }
         Add addClassAnootation = ctclass.getAnnotation(Constants.AddAnnotationClass) as Add;
         if (addClassAnootation != null && !Config.newlyAddedClassNameList.contains(ctclass.name)) {
             Config.newlyAddedClassNameList.add(ctclass.name);

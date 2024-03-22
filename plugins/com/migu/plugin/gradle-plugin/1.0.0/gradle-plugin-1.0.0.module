@@ -1,0 +1,97 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.migu.plugin",
+    "module": "gradle-plugin",
+    "version": "1.0.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.5"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "gradle-plugin-1.0.0.jar",
+          "url": "gradle-plugin-1.0.0.jar",
+          "size": 64565,
+          "sha512": "160e5d9dea57bbf311007067f88c681aac45beba3aa1bde66efe6ec3e88b4d347926abf2b10ab0c0e124003918a2b5ca4505e02bb79d06979be58684f11e3948",
+          "sha256": "de0ed219f0d53b325a08c25ed141ec6fe15d6b05b603e12ca45886628e603afe",
+          "sha1": "f7d57911929ea7047cdc2e1c1090f18c41202b39",
+          "md5": "d5ab463a061d172dc427efa87eb3eea6"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 11,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.android.tools.build",
+          "module": "gradle",
+          "version": {
+            "requires": "3.4.2"
+          }
+        },
+        {
+          "group": "org.javassist",
+          "module": "javassist",
+          "version": {
+            "requires": "3.20.0-GA"
+          }
+        },
+        {
+          "group": "commons-io",
+          "module": "commons-io",
+          "version": {
+            "requires": "2.11.0"
+          }
+        },
+        {
+          "group": "com.migu.plugin",
+          "module": "auto-patch-base",
+          "version": {
+            "requires": "1.0.0"
+          }
+        },
+        {
+          "group": "org.ow2.asm",
+          "module": "asm",
+          "version": {
+            "requires": "5.0.1"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "gradle-plugin-1.0.0.jar",
+          "url": "gradle-plugin-1.0.0.jar",
+          "size": 64565,
+          "sha512": "160e5d9dea57bbf311007067f88c681aac45beba3aa1bde66efe6ec3e88b4d347926abf2b10ab0c0e124003918a2b5ca4505e02bb79d06979be58684f11e3948",
+          "sha256": "de0ed219f0d53b325a08c25ed141ec6fe15d6b05b603e12ca45886628e603afe",
+          "sha1": "f7d57911929ea7047cdc2e1c1090f18c41202b39",
+          "md5": "d5ab463a061d172dc427efa87eb3eea6"
+        }
+      ]
+    }
+  ]
+}
